@@ -13,7 +13,7 @@ const Portfolio = () => {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 0.2,
+        delay: 0.3,
         staggerChildren: 0.3,
         delayChildren: 0.5,
         duration: 0.5,

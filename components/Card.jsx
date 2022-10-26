@@ -12,7 +12,13 @@ const Card = ({ title, desc, variants, ...tags }) => {
         variants={variants}
       >
         <Stack>
-          <Box bg="teal.200" p={2} as={motion.div} whileHover={{ scale: 1.1 }}>
+          <Box
+            bg="teal.200"
+            p={2}
+            as={motion.div}
+            whileHover={{ scale: 1.1 }}
+            borderRadius="sm"
+          >
             <Heading fontSize={"2xl"}>{title}</Heading>
             <Text>{desc}</Text>
             <Text fontSize={"sm"}>tags</Text>

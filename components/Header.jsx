@@ -17,7 +17,7 @@ const Header = () => {
   const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 
   return (
-    <Box as="header" py={5}>
+    <Box as="header" py={5} mb={[5, 150]}>
       <Flex w="100%" alignItems="center">
         <Heading>JSCS</Heading>
         <Spacer />

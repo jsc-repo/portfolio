@@ -7,7 +7,7 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
     <>
       <Slide direction="right" in={isOpen} style={{ zIndex: 10 }}>
         <Box
-          p={[1, 4]}
+          p={5}
           color="white"
           bg="orange.200"
           shadow="md"
@@ -17,11 +17,9 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
           pos="fixed"
           right="0"
           bottom="0"
-          transition=""
         >
           <Flex justifyContent={"end"}>
             <IconButton
-              mt={4}
               display={{ sm: "none" }}
               aria-label="Open Menu"
               icon={<CloseIcon />}
@@ -30,21 +28,21 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
           </Flex>
 
           <Flex justifyContent="center" my="5em">
-            <Stack as="nav" fontSize="2xl" spacing="24px">
+            <Stack as="nav" fontSize="4xl" spacing="24px">
               <NextLink href={"/"} passHref>
-                <Link>Home</Link>
+                <Link onClick={onClose}>Home</Link>
               </NextLink>
               <NextLink href={"/about"} passHref>
-                <Link>About</Link>
+                <Link onClick={onClose}>About</Link>
               </NextLink>
-              <NextLink href={"/works"} passHref>
-                <Link>Works</Link>
+              <NextLink href={"/portfolio"} passHref>
+                <Link onClick={onClose}>Portfolio</Link>
               </NextLink>
               <NextLink href={"/blog"} passHref>
-                <Link>Blog</Link>
+                <Link onClick={onClose}>Blog</Link>
               </NextLink>
               <NextLink href={"/contact"} passHref>
-                <Link>Contact</Link>
+                <Link onClick={onClose}>Contact</Link>
               </NextLink>
             </Stack>
           </Flex>

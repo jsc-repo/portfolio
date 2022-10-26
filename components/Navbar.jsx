@@ -1,6 +1,5 @@
-import { Box, HStack, Link, useDisclosure } from "@chakra-ui/react";
+import { Box, HStack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import React from "react";
 
 const Navbar = () => {
   return (
