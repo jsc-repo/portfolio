@@ -33,7 +33,7 @@ const Portfolio = () => {
     },
   };
   return (
-    <Box>
+    <Box as="section">
       <Heading mb={4}>
         {/* <Highlight
             query="Portfolio"
