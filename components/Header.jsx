@@ -13,6 +13,7 @@ import {
   MenuList,
   Spacer,
   Stack,
+  Text,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
@@ -39,7 +40,7 @@ const Header = () => {
           }}
           display={{ base: "none", sm: "flex" }}
         >
-          Let's Talk
+          <Text>Let's Talk</Text>
         </Button>
 
         {isOpen ? (
