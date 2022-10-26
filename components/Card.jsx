@@ -10,6 +10,14 @@ const Card = ({ title, desc, variants, ...tags }) => {
         bg="orange.100"
         as={motion.div}
         variants={variants}
+        // initial={{ opacity: 0, x: -50 }}
+        // visible={{ opacity: 1, x: 0 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 0.5,
+        }}
       >
         <Stack>
           <Box

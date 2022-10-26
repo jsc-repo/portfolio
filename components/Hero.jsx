@@ -1,3 +1,6 @@
+import { EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import NextLink from "next/link";
+import { AiFillGithub } from "react-icons/ai";
 import {
   Box,
   Button,
@@ -37,9 +40,37 @@ const Hero = () => {
             Samuel Choi.
           </Heading>
           <Stack direction={["column", "row"]} mt={5}>
-            <Button>Resume</Button>
-            <Button>Email</Button>
-            <Button>GitHub</Button>
+            <NextLink
+              href={
+                "https://drive.google.com/file/d/1Y3Z2mvCtKJf652SHZg6_8217JcS_ic0-/view?usp=sharing"
+              }
+              passHref
+            >
+              <Button
+                as="a"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="resume"
+                leftIcon={<ExternalLinkIcon />}
+              >
+                Resume
+              </Button>
+            </NextLink>
+            <Button leftIcon={<EmailIcon />}>Email</Button>
+            <NextLink
+              href={"https://github.com/jsc-repo?tab=repositories"}
+              passHref
+            >
+              <Button
+                as="a"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="github link"
+                leftIcon={<AiFillGithub />}
+              >
+                GitHub
+              </Button>
+            </NextLink>
           </Stack>
         </Box>
       </Box>
