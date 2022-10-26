@@ -16,14 +16,13 @@ export default function Home() {
       </Head>
 
       <main>
-        <Container maxW={["container.lg"]}>
-          <Stack spacing={10}>
-            <Header />
-            <Hero />
-            <About />
-            <Portfolio />
-          </Stack>
-        </Container>
+        {/* <Container maxW={["container.lg"]}>
+        </Container> */}
+        <Stack spacing={10}>
+          <Hero />
+          <About />
+          <Portfolio />
+        </Stack>
       </main>
     </div>
   );

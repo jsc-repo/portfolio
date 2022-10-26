@@ -17,8 +17,8 @@ const Navbar = () => {
         <NextLink href={"/about"} passHref>
           <Link>About</Link>
         </NextLink>
-        <NextLink href={"/works"} passHref>
-          <Link>Works</Link>
+        <NextLink href={"/portfolio"} passHref>
+          <Link>Portfolio</Link>
         </NextLink>
         <NextLink href={"/blog"} passHref>
           <Link>Blog</Link>
