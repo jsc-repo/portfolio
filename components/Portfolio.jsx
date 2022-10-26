@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Highlight, Stack, chakra } from "@chakra-ui/react";
+import { Box, Heading, Stack, chakra } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 import Card from "./Card";
 

@@ -3,19 +3,11 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
-  Container,
   Flex,
   Heading,
   IconButton,
-  Link,
-  Menu,
-  MenuItem,
-  MenuList,
   Spacer,
-  Stack,
-  Text,
   useDisclosure,
-  VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import Navbar from "./Navbar";
@@ -40,7 +32,7 @@ const Header = () => {
           }}
           display={{ base: "none", sm: "flex" }}
         >
-          <Text>Let's Talk</Text>
+          Let&apos;s Talk
         </Button>
 
         {isOpen ? (
