@@ -19,6 +19,7 @@ const ChakraBox = chakra(motion.div, {
 const About = () => {
   return (
     <ChakraBox
+      id="about"
       initial="hidden"
       whileInView="visible"
       viewport={{
@@ -35,11 +36,13 @@ const About = () => {
     >
       <Stack>
         <Heading>About Me</Heading>
-        <Text>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga
-          praesentium autem dolor similique nulla accusantium blanditiis quidem
-          porro. Adipisci nisi eveniet dolor tenetur nemo fugit, beatae est
-          corrupti sit rerum.
+        <Text fontSize="xl">
+          Former NYC math teacher turned developer with a proven ability to
+          adapt in both self-starting and collaborative environments while
+          staying focused on achieving high-quality results. Resourceful and
+          with a passion for learning, I am eager to venture into web
+          development and help build the next modern websites with exceptional
+          user experience.
         </Text>
       </Stack>
     </ChakraBox>

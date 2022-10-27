@@ -1,60 +1,82 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
-
+import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import Typewriter from "typewriter-effect";
 import {
   Box,
   Button,
   Flex,
   Heading,
   Highlight,
+  HStack,
   IconButton,
   Spacer,
+  useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
 import Navbar from "./Navbar";
 import NavSidebar from "./NavSidebar";
 
 const Header = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  const handleScroll = () => {
+    console.log("scroll");
+    const contact = document.getElementById("contact");
+    contact.scrollIntoView({ behavior: "smooth" });
+  };
   const { isOpen, onOpen, onClose, onToggle } = useDisclosure();
 
   return (
     <Box as="header" py={5} mb={[5, 150]}>
       <Flex w="100%" alignItems="center">
         <Heading>
-          <Highlight query="JS" styles={{ bg: "orange.100" }}>
-            JSCS
-          </Highlight>
+          <Typewriter
+            options={{
+              strings: "JSCS",
+              autoStart: true,
+              delay: 300,
+            }}
+          />
+
+          {/* <Highlight query="JS" styles={{ bg: "orange.100" }} id="JSCS">
+          </Highlight> */}
         </Heading>
         <Spacer />
         <Navbar />
         <Spacer />
-        <Button
-          backgroundColor="purple.500"
-          color="gray.50"
-          _hover={{
-            bg: "yellow.300",
-            color: "gray.800",
-          }}
-          display={{ base: "none", sm: "flex" }}
-        >
-          Let&apos;s Talk
-        </Button>
-
-        {isOpen ? (
-          <NavSidebar
-            isOpen={isOpen}
-            onClose={onClose}
-            onOpen={onOpen}
-            onToggle={onToggle}
-          />
-        ) : (
+        <HStack>
           <IconButton
-            display={{ sm: "none" }}
-            aria-label="Open Menu"
-            icon={<HamburgerIcon />}
-            onClick={onToggle}
+            aria-label="toggle dark mode"
+            onClick={toggleColorMode}
+            icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           />
-        )}
+          <Button
+            backgroundColor="purple.500"
+            color="gray.50"
+            _hover={{
+              bg: "yellow.300",
+              color: "gray.800",
+            }}
+            display={{ base: "none", sm: "flex" }}
+            onClick={handleScroll}
+          >
+            Let&apos;s Talk
+          </Button>
+          {isOpen ? (
+            <NavSidebar
+              isOpen={isOpen}
+              onClose={onClose}
+              onOpen={onOpen}
+              onToggle={onToggle}
+            />
+          ) : (
+            <IconButton
+              display={{ sm: "none" }}
+              aria-label="Open Menu"
+              icon={<HamburgerIcon />}
+              onClick={onToggle}
+            />
+          )}
+        </HStack>
       </Flex>
     </Box>
   );

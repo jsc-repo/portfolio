@@ -1,6 +1,6 @@
 import { EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {
   Box,
   Button,
@@ -9,10 +9,17 @@ import {
   Heading,
   Image,
   Stack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 
 const Hero = () => {
+  // const circleBg = useColorModeValue("orange.100", "purple.300");
+  const circleBg = useColorModeValue("orange.100", "yellow.300");
+  const handleScroll = () => {
+    const contact = document.getElementById("contact");
+    contact.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Stack direction={["column", "row"]} spacing={10}>
       <Box>
@@ -31,7 +38,7 @@ const Hero = () => {
             borderRadius: "50%",
             borderColor: "purple.100",
             opacity: 0.6,
-            bg: "purple.300",
+            bg: circleBg,
             right: "-40px",
             display: ["none", "flex"],
           }}
@@ -56,7 +63,9 @@ const Hero = () => {
                 Resume
               </Button>
             </NextLink>
-            <Button leftIcon={<EmailIcon />}>Email</Button>
+            <Button onClick={handleScroll} leftIcon={<EmailIcon />}>
+              Email
+            </Button>
             <NextLink
               href={"https://github.com/jsc-repo?tab=repositories"}
               passHref
@@ -69,6 +78,21 @@ const Hero = () => {
                 leftIcon={<AiFillGithub />}
               >
                 GitHub
+              </Button>
+            </NextLink>
+
+            <NextLink
+              href={"https://www.linkedin.com/in/samuel-choi-38ab7b253/"}
+              passHref
+            >
+              <Button
+                as="a"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Linked In link"
+                leftIcon={<AiFillLinkedin />}
+              >
+                LinkedIn
               </Button>
             </NextLink>
           </Stack>

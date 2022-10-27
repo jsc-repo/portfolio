@@ -1,10 +1,15 @@
-import { Box, Heading, Stack, chakra } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
+import NextLink from "next/link";
+import { ArrowRightIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Heading,
+  Stack,
+  Button,
+  Flex,
+  useColorMode,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import Card from "./Card";
-
-const ChakraBox = chakra(motion.div, {
-  shouldForwardProp: isValidMotionProp,
-});
 
 const Portfolio = () => {
   const container = {
@@ -33,15 +38,28 @@ const Portfolio = () => {
     },
   };
   return (
-    <Box as="section">
-      <Heading mb={4}>
-        {/* <Highlight
+    <Box as="section" id="portfolio">
+      <Flex>
+        <Heading mb={4}>
+          {/* <Highlight
             query="Portfolio"
             styles={{ px: "10", py: "1", rounded: "full", bg: "red.100" }}
           >
           </Highlight> */}
-        Portfolio
-      </Heading>
+          Portfolio
+        </Heading>
+
+        <NextLink href={"/portfolio"} passHref>
+          <Button
+            as="a"
+            aria-label="portfolio"
+            rightIcon={<ArrowRightIcon />}
+            ml={4}
+          >
+            See More
+          </Button>
+        </NextLink>
+      </Flex>
 
       <Box
         as={motion.div}

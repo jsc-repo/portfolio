@@ -1,17 +1,40 @@
-import { Box, Divider, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 const Card = ({ title, desc, variants, ...tags }) => {
+  const { toggleColorMode } = useColorMode();
+  // const boxBg = useColorModeValue("yellow.100", "teal.900");
+  const boxBg = useColorModeValue("purple.500", "purple.200");
+  // const cardBg = useColorModeValue("teal.200", "teal.600");
+  const cardBg = useColorModeValue("purple.100", "teal.500");
   return (
     <Stack spacing={5} direction={["column", "row"]}>
       <Box
+        pos="relative"
+        _before={{
+          content: `""`,
+          w: "90%",
+          h: "90%",
+          position: "absolute",
+          zIndex: -1,
+          right: "30px",
+          top: "-0px",
+          bg: boxBg,
+        }}
+        // bg={boxBg}
         maxW="600px"
-        p={10}
-        bg="orange.100"
+        p={5}
         as={motion.div}
         variants={variants}
-        // initial={{ opacity: 0, x: -50 }}
-        // visible={{ opacity: 1, x: 0 }}
         initial="hidden"
         whileInView="visible"
         viewport={{
@@ -21,7 +44,7 @@ const Card = ({ title, desc, variants, ...tags }) => {
       >
         <Stack>
           <Box
-            bg="teal.200"
+            bg={cardBg}
             p={2}
             as={motion.div}
             whileHover={{ scale: 1.1 }}
@@ -35,7 +58,7 @@ const Card = ({ title, desc, variants, ...tags }) => {
       </Box>
       <Divider display={["flex", "none"]} />
       <Flex alignItems={"center"}>
-        <Text>{desc}</Text>
+        <Text fontSize={"xl"}>{desc}</Text>
       </Flex>
     </Stack>
   );

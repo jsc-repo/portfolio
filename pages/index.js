@@ -1,4 +1,5 @@
 import { Stack } from "@chakra-ui/react";
+import { useRef } from "react";
 import Head from "next/head";
 import About from "../components/About";
 import Contact from "../components/Contact";
@@ -16,8 +17,6 @@ export default function Home() {
       </Head>
 
       <main>
-        {/* <Container maxW={["container.lg"]}>
-        </Container> */}
         <Stack spacing={20}>
           <Hero />
           <About />

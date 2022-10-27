@@ -27,22 +27,16 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
             />
           </Flex>
 
-          <Flex justifyContent="center" my="5em">
-            <Stack as="nav" fontSize="4xl" spacing="24px">
+          <Flex justifyContent="center" my="5em" fontSize="3xl">
+            <Stack as="nav" spacing="24px">
               <NextLink href={"/"} passHref>
                 <Link onClick={onClose}>Home</Link>
-              </NextLink>
-              <NextLink href={"/about"} passHref>
-                <Link onClick={onClose}>About</Link>
               </NextLink>
               <NextLink href={"/portfolio"} passHref>
                 <Link onClick={onClose}>Portfolio</Link>
               </NextLink>
               <NextLink href={"/blog"} passHref>
                 <Link onClick={onClose}>Blog</Link>
-              </NextLink>
-              <NextLink href={"/contact"} passHref>
-                <Link onClick={onClose}>Contact</Link>
               </NextLink>
             </Stack>
           </Flex>

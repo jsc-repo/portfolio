@@ -6,6 +6,7 @@ import {
   FormErrorMessage,
   FormLabel,
   Heading,
+  Highlight,
   Input,
   Stack,
   Textarea,
@@ -14,7 +15,7 @@ import {
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+const Contact = ({ ref }) => {
   const toast = useToast();
   const {
     handleSubmit,
@@ -44,7 +45,6 @@ const Contact = () => {
   return (
     <Box
       as="section"
-      id="contact"
       w="full"
       borderWidth={[0, 1]}
       p={[0, 8]}
@@ -52,11 +52,18 @@ const Contact = () => {
       boxShadow={[null, "lg"]}
     >
       <Box textAlign="center" mb={5}>
-        <Heading>Get in touch!</Heading>
+        <Heading>
+          <Highlight
+            styles={{ bg: "purple.100", rounded: "full", px: "2" }}
+            query="build"
+          >
+            Let's build something together
+          </Highlight>
+        </Heading>
       </Box>
 
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-        <Stack spacing={3}>
+        <Stack spacing={3} id="contact">
           <FormControl isInvalid={errors.name}>
             {/* <FormLabel htmlFor="name">name</FormLabel> */}
             <Input
