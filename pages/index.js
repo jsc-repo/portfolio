@@ -1,8 +1,7 @@
-import { Container, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Portfolio from "../components/Portfolio";
 
@@ -19,7 +18,7 @@ export default function Home() {
       <main>
         {/* <Container maxW={["container.lg"]}>
         </Container> */}
-        <Stack spacing={10}>
+        <Stack spacing={20}>
           <Hero />
           <About />
           <Portfolio />

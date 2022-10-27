@@ -1,16 +1,21 @@
 import {
   Box,
   Button,
+  Flex,
   FormControl,
   FormErrorMessage,
   FormLabel,
+  Heading,
   Input,
+  Stack,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const toast = useToast();
   const {
     handleSubmit,
     register,
@@ -27,94 +32,98 @@ const Contact = () => {
       process.env.NEXT_PUBLIC_PUBLIC_KEY
     );
 
+    toast({
+      title: "Sent!",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+
     reset();
   };
   return (
-    <Box as="section" id="contact">
+    <Box
+      as="section"
+      id="contact"
+      w="full"
+      borderWidth={[0, 1]}
+      p={[0, 8]}
+      pb={5}
+      boxShadow={[null, "lg"]}
+    >
+      <Box textAlign="center" mb={5}>
+        <Heading>Get in touch!</Heading>
+      </Box>
+
       <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
-        <FormControl isInvalid={errors.name}>
-          <FormLabel htmlFor="name">name</FormLabel>
-          <Input
-            type="text"
-            id="name"
-            placeholder="name"
-            {...register("name", {
-              required: "please enter your name",
-              minLength: { value: 4, message: "Minimum length of 4" },
-              maxLength: { value: 100, message: "Max length of 100" },
-            })}
-          />
-          <FormErrorMessage>
-            {errors.name && errors.name.message}
-          </FormErrorMessage>
-        </FormControl>
+        <Stack spacing={3}>
+          <FormControl isInvalid={errors.name}>
+            {/* <FormLabel htmlFor="name">name</FormLabel> */}
+            <Input
+              type="text"
+              id="name"
+              placeholder="name"
+              {...register("name", {
+                required: "please enter your name",
+                minLength: { value: 4, message: "Minimum length of 4" },
+                maxLength: { value: 100, message: "Max length of 100" },
+              })}
+            />
+            <FormErrorMessage>
+              {errors.name && errors.name.message}
+            </FormErrorMessage>
+          </FormControl>
 
-        <FormControl isInvalid={errors.email}>
-          <FormLabel htmlFor="email">email</FormLabel>
-          <Input
-            id="email"
-            type="text"
-            placeholder="email"
-            {...register("email", {
-              required: "please enter your email",
-              pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "invalid email address",
-              },
-            })}
-          />
-          <FormErrorMessage>
-            {errors.email && errors.email.message}
-          </FormErrorMessage>
-        </FormControl>
+          <FormControl isInvalid={errors.email}>
+            {/* <FormLabel htmlFor="email">email</FormLabel> */}
+            <Input
+              id="email"
+              type="email"
+              placeholder="email"
+              {...register("email", {
+                required: "please enter your email",
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "invalid email address",
+                },
+              })}
+            />
+            <FormErrorMessage>
+              {errors.email && errors.email.message}
+            </FormErrorMessage>
+          </FormControl>
 
-        <FormControl isInvalid={errors.message}>
-          <FormLabel htmlFor="message">message</FormLabel>
-          <Textarea
-            id="message"
-            type="text"
-            placeholder="message"
-            {...register("message", {
-              required: "please write a message",
-              maxLength: { value: 2000, message: "Max length of 2000" },
-            })}
-          />
-          <FormErrorMessage>
-            {errors.message && errors.message.message}
-          </FormErrorMessage>
-        </FormControl>
+          <FormControl isInvalid={errors.message}>
+            {/* <FormLabel htmlFor="message">message</FormLabel> */}
+            <Textarea
+              id="message"
+              type="text"
+              placeholder="message"
+              {...register("message", {
+                required: "please write a message",
+                maxLength: { value: 2000, message: "Max length of 2000" },
+              })}
+            />
+            <FormErrorMessage>
+              {errors.message && errors.message.message}
+            </FormErrorMessage>
+          </FormControl>
 
-        <Button
-          mt={4}
-          colorScheme="teal"
-          isLoading={isSubmitting}
-          type="submit"
-        >
-          Submit
-        </Button>
+          <Flex justifyContent={"center"}>
+            <Button
+              justifyContent="center"
+              colorScheme="orange"
+              isLoading={isSubmitting}
+              type="submit"
+              w={"xs"}
+            >
+              SEND
+            </Button>
+          </Flex>
+        </Stack>
       </form>
     </Box>
   );
 };
 
 export default Contact;
-
-{
-  /* <form onSubmit={handleSubmit(onSubmit)}>
-  <FormControl isInvalid={errors.name}>
-    <FormLabel htmlFor="name">First name</FormLabel>
-    <Input
-      id="name"
-      placeholder="name"
-      {...register("name", {
-        required: "This is required",
-        minLength: { value: 4, message: "Minimum length should be 4" },
-      })}
-    />
-    <FormErrorMessage>{errors.name && errors.name.message}</FormErrorMessage>
-  </FormControl>
-  <Button mt={4} colorScheme="teal" isLoading={isSubmitting} type="submit">
-    Submit
-  </Button>
-</form> */
-}

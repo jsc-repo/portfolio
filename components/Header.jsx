@@ -5,6 +5,7 @@ import {
   Button,
   Flex,
   Heading,
+  Highlight,
   IconButton,
   Spacer,
   useDisclosure,
@@ -19,7 +20,11 @@ const Header = () => {
   return (
     <Box as="header" py={5} mb={[5, 150]}>
       <Flex w="100%" alignItems="center">
-        <Heading>JSCS</Heading>
+        <Heading>
+          <Highlight query="JS" styles={{ bg: "orange.100" }}>
+            JSCS
+          </Highlight>
+        </Heading>
         <Spacer />
         <Navbar />
         <Spacer />
