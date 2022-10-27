@@ -10,6 +10,7 @@ import {
   IconButton,
   Spacer,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import Navbar from "./Navbar";
@@ -17,6 +18,9 @@ import NavSidebar from "./NavSidebar";
 
 const Header = () => {
   const { colorMode, toggleColorMode } = useColorMode();
+
+  const buttonBg = useColorModeValue("purple.200", "yellow.500");
+  const hoverBg = useColorModeValue("purple.300", "yellow.600");
 
   const handleScroll = () => {
     console.log("scroll");
@@ -50,12 +54,16 @@ const Header = () => {
             icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           />
           <Button
-            backgroundColor="purple.500"
-            color="gray.50"
+            // backgroundColor="purple.500"
+            bg={buttonBg}
             _hover={{
-              bg: "yellow.300",
-              color: "gray.800",
+              bg: hoverBg,
             }}
+            // color="gray.50"
+            // _hover={{
+            //   bg: "yellow.300",
+            //   color: "gray.800",
+            // }}
             display={{ base: "none", sm: "flex" }}
             onClick={handleScroll}
           >

@@ -4,7 +4,6 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {
   Box,
   Button,
-  Container,
   Flex,
   Heading,
   Image,
@@ -15,7 +14,7 @@ import React from "react";
 
 const Hero = () => {
   // const circleBg = useColorModeValue("orange.100", "purple.300");
-  const circleBg = useColorModeValue("orange.100", "yellow.300");
+  const circleBg = useColorModeValue("orange.100", "yellow.400");
   const handleScroll = () => {
     const contact = document.getElementById("contact");
     contact.scrollIntoView({ behavior: "smooth" });

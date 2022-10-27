@@ -10,12 +10,15 @@ import {
   Input,
   Stack,
   Textarea,
+  useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 const Contact = ({ ref }) => {
+  const contactButtonBg = useColorModeValue("purple", "yellow");
+  const highlightBg = useColorModeValue("purple.100", "yellow.100");
   const toast = useToast();
   const {
     handleSubmit,
@@ -54,7 +57,11 @@ const Contact = ({ ref }) => {
       <Box textAlign="center" mb={5}>
         <Heading>
           <Highlight
-            styles={{ bg: "purple.100", rounded: "full", px: "2" }}
+            styles={{
+              bg: highlightBg,
+              rounded: "full",
+              px: "2",
+            }}
             query="build"
           >
             Let&apos;s build something together
@@ -120,7 +127,7 @@ const Contact = ({ ref }) => {
             <Button
               variant={"outline"}
               justifyContent="center"
-              colorScheme="purple"
+              colorScheme={contactButtonBg}
               isLoading={isSubmitting}
               type="submit"
               w={"xs"}
