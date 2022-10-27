@@ -57,7 +57,7 @@ const Contact = ({ ref }) => {
             styles={{ bg: "purple.100", rounded: "full", px: "2" }}
             query="build"
           >
-            Let's build something together
+            Let&apos;s build something together
           </Highlight>
         </Heading>
       </Box>
