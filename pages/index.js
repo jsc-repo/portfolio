@@ -13,7 +13,7 @@ export default function Home() {
         <title>Samuel Choi - Portfolio</title>
         <meta name="description" content="Portfolio website" />
         <meta name="author" content="Samuel Choi" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <main>
