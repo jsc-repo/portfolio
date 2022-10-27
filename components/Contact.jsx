@@ -118,8 +118,9 @@ const Contact = ({ ref }) => {
 
           <Flex justifyContent={"center"}>
             <Button
+              variant={"outline"}
               justifyContent="center"
-              colorScheme="orange"
+              colorScheme="purple"
               isLoading={isSubmitting}
               type="submit"
               w={"xs"}

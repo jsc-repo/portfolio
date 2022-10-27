@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 const Card = ({ title, desc, variants, ...tags }) => {
   const { toggleColorMode } = useColorMode();
   // const boxBg = useColorModeValue("yellow.100", "teal.900");
-  const boxBg = useColorModeValue("purple.500", "purple.200");
+  const boxBg = useColorModeValue("purple.500", "teal.200");
   // const cardBg = useColorModeValue("teal.200", "teal.600");
   const cardBg = useColorModeValue("purple.100", "teal.500");
   return (
