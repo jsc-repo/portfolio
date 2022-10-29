@@ -9,7 +9,7 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
         <Box
           p={5}
           color="white"
-          bg="orange.200"
+          bg="gray.700"
           shadow="md"
           w="full"
           h="full"
@@ -20,6 +20,7 @@ const NavSidebar = ({ isOpen, onClose, onOpen, onToggle }) => {
         >
           <Flex justifyContent={"end"}>
             <IconButton
+              bg="blue.900"
               display={{ sm: "none" }}
               aria-label="Open Menu"
               icon={<CloseIcon />}
