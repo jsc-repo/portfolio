@@ -40,7 +40,7 @@ const Portfolio = () => {
   return (
     <Box as="section" id="portfolio">
       <Flex>
-        <Heading mb={4}>
+        <Heading mb={8}>
           {/* <Highlight
             query="Portfolio"
             styles={{ px: "10", py: "1", rounded: "full", bg: "red.100" }}

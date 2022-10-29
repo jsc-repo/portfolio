@@ -28,7 +28,6 @@ const Contact = ({ ref }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     emailjs.sendForm(
       process.env.NEXT_PUBLIC_SERVICE_ID,
       process.env.NEXT_PUBLIC_TEMPLATE_ID,
