@@ -1,5 +1,6 @@
-import { EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import Typewriter from "typewriter-effect";
+import { EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import {
   Box,
@@ -43,7 +44,13 @@ const Hero = () => {
           }}
         >
           <Heading as="h1" size="4xl" style={{ zIndex: 10 }} w="100%">
-            Samuel Choi.
+            <Typewriter
+              options={{
+                strings: "Samuel Choi.",
+                autoStart: true,
+                delay: 200,
+              }}
+            />
           </Heading>
           <Stack direction={["column", "row"]} mt={5}>
             <NextLink

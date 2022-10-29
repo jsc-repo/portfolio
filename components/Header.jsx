@@ -1,4 +1,5 @@
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
+import NextLink from "next/link";
 import Typewriter from "typewriter-effect";
 import {
   Box,
@@ -7,7 +8,10 @@ import {
   Heading,
   Highlight,
   HStack,
+  Icon,
   IconButton,
+  Image,
+  Link,
   Spacer,
   useColorMode,
   useColorModeValue,
@@ -32,18 +36,14 @@ const Header = () => {
   return (
     <Box as="header" py={5} mb={[5, 150]}>
       <Flex w="100%" alignItems="center">
-        <Heading>
-          <Typewriter
-            options={{
-              strings: "JSCS",
-              autoStart: true,
-              delay: 300,
-            }}
-          />
+        <Box>
+          <NextLink href="/" passHref>
+            <Link>
+              <Image src="/favicon.png" alt="logo" boxSize={"75px"} />
+            </Link>
+          </NextLink>
+        </Box>
 
-          {/* <Highlight query="JS" styles={{ bg: "orange.100" }} id="JSCS">
-          </Highlight> */}
-        </Heading>
         <Spacer />
         <Navbar />
         <Spacer />
@@ -54,16 +54,10 @@ const Header = () => {
             icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           />
           <Button
-            // backgroundColor="purple.500"
             bg={buttonBg}
             _hover={{
               bg: hoverBg,
             }}
-            // color="gray.50"
-            // _hover={{
-            //   bg: "yellow.300",
-            //   color: "gray.800",
-            // }}
             display={{ base: "none", sm: "flex" }}
             onClick={handleScroll}
           >

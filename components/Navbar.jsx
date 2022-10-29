@@ -2,13 +2,6 @@ import { Box, HStack, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 const Navbar = () => {
-  const handleScroll = (elementId) => {
-    const element = document.getElementById(elementId);
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <Box>
       <HStack
