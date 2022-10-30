@@ -51,10 +51,11 @@ const Portfolio = () => {
 
         <NextLink href={"/portfolio"} passHref>
           <Button
+            size="md"
             as="a"
             aria-label="portfolio"
             rightIcon={<ArrowRightIcon />}
-            ml={4}
+            // ml={4}
           >
             See More
           </Button>

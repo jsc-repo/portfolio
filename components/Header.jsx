@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <Box as="header" py={5} mb={[5, 150]}>
       <Flex w="100%" alignItems="center">
-        <Box>
+        <Box ml="-15px">
           <NextLink href="/" passHref>
             <Link>
               <Image src="/favicon.png" alt="logo" boxSize={"75px"} />
