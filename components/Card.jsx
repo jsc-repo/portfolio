@@ -19,8 +19,9 @@ import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-const Card = ({ title, desc, variants, tags, href }) => {
+const Card = ({ title, desc, variants, tags, href, liveHref }) => {
   const [isMounted, setIsMounted] = useState("false");
 
   useEffect(() => {
@@ -86,10 +87,22 @@ const Card = ({ title, desc, variants, tags, href }) => {
       </Box>
       <Divider display={["flex", "none"]} />
 
-      <Stack mt={["2", "0"]}>
-        <Link href={href} isExternal aria-label="link to github project">
-          <IconButton icon={<AiFillGithub />} size="md" />
-        </Link>
+      <Stack mt={["2", "0"]} direction="column">
+        <Stack direction={"row"}>
+          <Link href={href} isExternal aria-label="link to github project">
+            <IconButton icon={<AiFillGithub />} size="md" />
+          </Link>
+
+          {liveHref && (
+            <Link
+              href={liveHref}
+              isExternal
+              aria-label="link to project website"
+            >
+              <IconButton icon={<ExternalLinkIcon />} size="md" />
+            </Link>
+          )}
+        </Stack>
         <Text fontSize={"xl"}>{desc}</Text>
       </Stack>
       {/* <Flex alignItems="center"></Flex> */}
