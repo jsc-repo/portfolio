@@ -7,9 +7,11 @@ import {
   Button,
   Flex,
   useColorMode,
+  IconButton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Card from "./Card";
+import { AiFillGithub } from "react-icons/ai";
 
 const Portfolio = () => {
   const container = {
@@ -55,7 +57,6 @@ const Portfolio = () => {
             as="a"
             aria-label="portfolio"
             rightIcon={<ArrowRightIcon />}
-            // ml={4}
           >
             See More
           </Button>
@@ -72,34 +73,46 @@ const Portfolio = () => {
         }}
         variants={container}
       >
-        <Stack spacing={5} direction={["column"]}>
+        <Stack spacing={10}>
           <Box>
             <Card
-              title={"project 1"}
+              title="Full Stack Budget App"
               desc={
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                "Full stack budget app made with Django Rest Framework and React. Users can login with GitHub/Google then create a project and start tracking expenses while being able to view statistics and a graph about their spending habits. "
               }
               variants={listItem}
+              tags={[
+                "Python",
+                "JS",
+                "React",
+                "Django",
+                "Django Rest Framework",
+              ]}
+              href="https://github.com/jsc-repo/react_dotnet_blog_api"
             />
           </Box>
 
           <Box>
             <Card
-              title={"project 2"}
+              title="Full Stack Blog App"
               desc={
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                "A simple blog made with .NET Web API and React. Users can sign up/login and start creating blog posts. On the backend, .NET handles authentication with JWT and refresh tokens for a better user experience."
               }
               variants={listItem}
+              href="https://github.com/jsc-repo/react_dotnet_blog_api"
+              tags={["React", ".NET Web API", "CSharp", "JS"]}
             />
           </Box>
 
           <Box>
             <Card
-              title={"project 3"}
+              title="Light Twitter Clone"
               desc={
-                "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diamnonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum."
+                "Light Twitter clone made with Django MVC. Users can sign up and start creating tweets."
               }
               variants={listItem}
+              tags={["Python", "Django"]}
+              href="https://github.com/jsc-repo/django-social"
             />
           </Box>
         </Stack>

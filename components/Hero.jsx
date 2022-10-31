@@ -46,7 +46,7 @@ const Hero = () => {
           <Heading as="h1" size="4xl" style={{ zIndex: 10 }} w="100%">
             <Typewriter
               options={{
-                strings: "Samuel Choi.",
+                strings: "Samuel Choi",
                 autoStart: true,
                 delay: 200,
               }}
