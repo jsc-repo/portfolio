@@ -112,13 +112,12 @@ const Hero = () => {
           boxSize="300px"
           objectFit="cover"
           mx="auto"
-          src="/profile.jpg"
+          src="profile.jpg"
           alt="Profile Picture"
           borderRadius="full"
         />
       </Box>
     </Stack>
-    // </Stack>
   );
 };
 
