@@ -1,7 +1,5 @@
 import {
-  Badge,
   Box,
-  Button,
   Divider,
   Flex,
   Heading,
@@ -12,14 +10,11 @@ import {
   Stack,
   Tag,
   Text,
-  useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import "@fontsource/raleway/700.css";
-import NextLink from "next/link";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
-import { useEffect, useState } from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Card = ({ title, desc, variants, tags, href, liveHref }) => {

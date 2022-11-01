@@ -1,19 +1,6 @@
-import NextLink from "next/link";
-import {
-  Box,
-  Flex,
-  Heading,
-  Button,
-  Text,
-  Stack,
-  Highlight,
-  Textarea,
-  Divider,
-  StackDivider,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Stack, Divider } from "@chakra-ui/react";
 import Card from "../components/Card";
 import { motion } from "framer-motion";
-import Portfolio from "../components/Portfolio";
 
 const portfolio = () => {
   const container = {

@@ -1,17 +1,8 @@
 import NextLink from "next/link";
 import { ArrowRightIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Heading,
-  Stack,
-  Button,
-  Flex,
-  useColorMode,
-  IconButton,
-} from "@chakra-ui/react";
+import { Box, Heading, Stack, Button, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Card from "./Card";
-import { AiFillGithub } from "react-icons/ai";
 
 const Portfolio = () => {
   const container = {
@@ -42,14 +33,7 @@ const Portfolio = () => {
   return (
     <Box as="section" id="portfolio">
       <Flex>
-        <Heading mb={8}>
-          {/* <Highlight
-            query="Portfolio"
-            styles={{ px: "10", py: "1", rounded: "full", bg: "red.100" }}
-          >
-          </Highlight> */}
-          Portfolio
-        </Heading>
+        <Heading mb={8}>Portfolio</Heading>
 
         <NextLink href={"/portfolio"} passHref>
           <Button

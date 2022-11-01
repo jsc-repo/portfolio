@@ -10,13 +10,10 @@ import {
   Image,
   Stack,
   useColorModeValue,
-  Wrap,
-  WrapItem,
 } from "@chakra-ui/react";
 import React from "react";
 
 const Hero = () => {
-  // const circleBg = useColorModeValue("orange.100", "purple.300");
   const circleBg = useColorModeValue("orange.100", "yellow.400");
   const handleScroll = () => {
     const contact = document.getElementById("contact");
@@ -112,7 +109,7 @@ const Hero = () => {
           boxSize="300px"
           objectFit="cover"
           mx="auto"
-          src="profile.jpg"
+          src="/profile.jpg"
           alt="Profile Picture"
           borderRadius="full"
         />

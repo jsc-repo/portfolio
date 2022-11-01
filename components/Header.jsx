@@ -1,14 +1,10 @@
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import Typewriter from "typewriter-effect";
 import {
   Box,
   Button,
   Flex,
-  Heading,
-  Highlight,
   HStack,
-  Icon,
   IconButton,
   Image,
   Link,
