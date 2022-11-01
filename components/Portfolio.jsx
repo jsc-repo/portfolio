@@ -87,7 +87,9 @@ const Portfolio = () => {
                 "JS",
                 "React",
                 "Django",
+                "Zustand",
                 "Django Rest Framework",
+                "Tan Stack Query",
               ]}
               href="https://github.com/jsc-repo/react_dotnet_blog_api"
             />
@@ -122,9 +124,9 @@ const Portfolio = () => {
           <Box>
             <Card
               title="Light Twitter Clone"
-              desc={
-                "Light Twitter clone made with Django MVC. Users can sign up and start creating tweets."
-              }
+              desc={`Light Twitter clone made with Django MVC. 
+                Users can sign up and start creating tweets, 
+                follow other users, and like/unlike tweets.`}
               variants={listItem}
               tags={["Python", "Django"]}
               href="https://github.com/jsc-repo/django-social"
