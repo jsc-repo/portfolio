@@ -107,7 +107,7 @@ const Hero = () => {
 
       <Box>
         <Image
-          src="/profile.jpg"
+          src={"/profile.jpg"}
           boxSize="300px"
           objectFit="cover"
           mx="auto"
