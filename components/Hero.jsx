@@ -10,6 +10,8 @@ import {
   Image,
   Stack,
   useColorModeValue,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -21,7 +23,7 @@ const Hero = () => {
     contact.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Stack direction={["column", "row"]} spacing={10}>
+    <Stack direction={["column", "column", "row"]} spacing={10}>
       <Box>
         <Flex>
           <Heading size="lg">Hi! My name is </Heading>
@@ -104,15 +106,19 @@ const Hero = () => {
           </Stack>
         </Box>
       </Box>
+
       <Box>
         <Image
+          boxSize="300px"
+          objectFit="cover"
           mx="auto"
-          src="https://bit.ly/dan-abramov"
-          alt="Dan Abramov"
+          src="/profile.jpg"
+          alt="Profile Picture"
           borderRadius="full"
         />
       </Box>
     </Stack>
+    // </Stack>
   );
 };
 
