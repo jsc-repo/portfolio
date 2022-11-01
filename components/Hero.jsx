@@ -106,19 +106,13 @@ const Hero = () => {
       </Box>
 
       <Box>
-        {/* <Image
+        <Image
+          src="/profile.jpg"
           boxSize="300px"
           objectFit="cover"
           mx="auto"
-          src="/profile.jpg"
           alt="Profile Picture"
           borderRadius="full"
-        /> */}
-        <NextImage
-          src="/profile.jpg"
-          alt="profile picture"
-          width="150px"
-          height="150px"
         />
       </Box>
     </Stack>
