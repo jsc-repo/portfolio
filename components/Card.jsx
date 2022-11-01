@@ -25,6 +25,8 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 const Card = ({ title, desc, variants, tags, href, liveHref }) => {
   const boxBg = useColorModeValue("purple.500", "teal.200");
   const cardBg = useColorModeValue("purple.100", "teal.500");
+  const linkBg = useColorModeValue("purple", "teal");
+  const outlineVariant = useColorModeValue("outline", null);
 
   return (
     // <Stack spacing={5} direction={["column", "row"]}>
@@ -71,7 +73,7 @@ const Card = ({ title, desc, variants, tags, href, liveHref }) => {
             <Link href={href} isExternal aria-label="link to github project">
               <IconButton
                 icon={<AiFillGithub />}
-                colorScheme={useColorModeValue("purple", "teal")}
+                colorScheme={linkBg}
                 variant={useColorModeValue("outline", null)}
               />
             </Link>
@@ -84,8 +86,8 @@ const Card = ({ title, desc, variants, tags, href, liveHref }) => {
               >
                 <IconButton
                   icon={<ExternalLinkIcon />}
-                  colorScheme={useColorModeValue("purple", "teal")}
-                  variant={useColorModeValue("outline", null)}
+                  colorScheme={linkBg}
+                  variant={outlineVariant}
                 />
               </Link>
             )}
