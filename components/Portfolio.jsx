@@ -77,9 +77,10 @@ const Portfolio = () => {
           <Box>
             <Card
               title="Full Stack Budget App"
-              desc={
-                "Full stack budget app made with Django Rest Framework and React. Users can login with GitHub/Google then create a project and start tracking expenses while being able to view statistics and a graph about their spending habits. "
-              }
+              desc={`Full stack budget app made with Django Rest Framework and React. 
+                Users can login with GitHub/Google then create a project and start 
+                tracking expenses while being able to view statistics and a graph 
+                about their spending habits. `}
               variants={listItem}
               tags={[
                 "Python",
@@ -95,9 +96,10 @@ const Portfolio = () => {
           <Box>
             <Card
               title="Full Stack Blog App"
-              desc={
-                "A simple blog made with .NET Web API and React. Users can sign up/login and start creating blog posts. On the backend, .NET handles authentication with JWT and refresh tokens for a better user experience."
-              }
+              desc={`A simple blog made with .NET Web API and React. 
+                Users can sign up/login and start creating blog posts. 
+                On the backend, .NET handles authentication with JWT 
+                and refresh tokens for a better user experience.`}
               variants={listItem}
               href="https://github.com/jsc-repo/react_dotnet_blog_api"
               tags={["React", ".NET Web API", "CSharp", "JS"]}
