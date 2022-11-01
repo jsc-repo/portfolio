@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import NextImage from "next/image";
+
 import Typewriter from "typewriter-effect";
 import { EmailIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
@@ -107,7 +108,7 @@ const Hero = () => {
 
       <Box>
         <Image
-          src={"/profile.jpg"}
+          src={"/profile.png"}
           boxSize="300px"
           objectFit="cover"
           mx="auto"
