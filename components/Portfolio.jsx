@@ -57,6 +57,7 @@ const Portfolio = () => {
             as="a"
             aria-label="portfolio"
             rightIcon={<ArrowRightIcon />}
+            ml={["0", "2"]}
           >
             See More
           </Button>
