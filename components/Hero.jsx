@@ -56,7 +56,7 @@ const Hero = () => {
           <Stack direction={["column", "row"]} mt={5}>
             <NextLink
               href={
-                "https://drive.google.com/file/d/1E8vmxpi1D3Btq74PA7QZUtijDX2BstNG/view?usp=sharing"
+                "https://drive.google.com/file/d/1xGbtMwzhVC9phdkN2U7xTZKmVFdXhSyg/view?usp=share_link"
               }
               passHref
             >
