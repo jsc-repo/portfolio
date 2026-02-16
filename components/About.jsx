@@ -37,12 +37,7 @@ const About = () => {
       <Stack>
         <Heading>About Me</Heading>
         <Text fontSize="xl">
-          Former NYC math teacher turned developer with a proven ability to
-          adapt in both self-starting and collaborative environments while
-          staying focused on achieving high-quality results. Resourceful and
-          with a passion for learning, I am eager to venture into web
-          development and help build the next modern websites with exceptional
-          user experience.
+          Tech Enthusiast & Creative Problem Solver with a Passion for Innovation
         </Text>
       </Stack>
     </ChakraBox>
